@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business License Fees</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f3e5e5;
+            border-radius: 5px;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            border: 1px solid #c38a8a;
+            border-radius: 5px;
+        }
+
+        .faq-question.active {
+            background-color: #5c995e;
+            color: rgb(239, 234, 234);
+        }
+
+        .faq-question.active + .faq-answer {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Business License Fees</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type of Business</th>
+                    <th>Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>General Business License</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Food and Beverage License</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>Health and Safety Permit</td>
+                    <td>$450</td>
+                </tr>
+            </tbody>
+        </table>
+            
+    </main>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">What is the process to apply for a business license?</div>
+            <div class="faq-answer">
+                <p>To apply for a business license, you need to fill out an application form available on our website, submit necessary documents, pay the required fees, and await approval from the licensing authority.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How long does it take to process a business license application?</div>
+            <div class="faq-answer">
+                <p>Processing times vary depending on the type of license and local regulations. Generally, it can take from a few weeks to a couple of months.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What types of payments are accepted for license fees?</div>
+            <div class="faq-answer">
+                <p>We accept payments via credit card, debit card, and electronic bank transfer. Cash payments may also be accepted depending on the local office policies.</p>
+            </div>
+        </div>
+        <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+
+        </script>
+</body>
+</html>
