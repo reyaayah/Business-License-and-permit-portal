@@ -50,6 +50,18 @@
     font-size: 1.2em;
     margin: 5px 0;
   }
+  .but-design{
+    
+    display: block;
+    width: 20%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
   
   </style>
 </head>
@@ -90,6 +102,8 @@
       }
 
       ?>
+      <br><button class="but-design"><a href="certificate.php" download> Download certificate</a></button>
+
       
 </body>
 </html>
